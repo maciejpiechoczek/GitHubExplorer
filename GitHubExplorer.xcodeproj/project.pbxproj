@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CD3BB8561FDFD165003CBC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BB8551FDFD165003CBC75 /* AppDelegate.swift */; };
-		CD3BB8581FDFD165003CBC75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BB8571FDFD165003CBC75 /* ViewController.swift */; };
+		CD3BB8581FDFD165003CBC75 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BB8571FDFD165003CBC75 /* RepositoriesViewController.swift */; };
 		CD3BB85B1FDFD165003CBC75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BB8591FDFD165003CBC75 /* Main.storyboard */; };
 		CD3BB85D1FDFD165003CBC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3BB85C1FDFD165003CBC75 /* Assets.xcassets */; };
 		CD3BB8601FDFD165003CBC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3BB85E1FDFD165003CBC75 /* LaunchScreen.storyboard */; };
+		CD3BB8711FDFE166003CBC75 /* CommitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BB8701FDFE166003CBC75 /* CommitsViewController.swift */; };
+		CD3BB8731FDFE192003CBC75 /* ReleasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3BB8721FDFE192003CBC75 /* ReleasesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD3BB8521FDFD165003CBC75 /* GitHubExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BB8551FDFD165003CBC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD3BB8571FDFD165003CBC75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD3BB8571FDFD165003CBC75 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		CD3BB85A1FDFD165003CBC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD3BB85C1FDFD165003CBC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3BB85F1FDFD165003CBC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3BB8611FDFD165003CBC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3BB8701FDFE166003CBC75 /* CommitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsViewController.swift; sourceTree = "<group>"; };
+		CD3BB8721FDFE192003CBC75 /* ReleasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,80 @@
 		CD3BB8541FDFD165003CBC75 /* GitHubExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				CD3BB86B1FDFD240003CBC75 /* Scenes */,
+				CD3BB8671FDFD1A1003CBC75 /* Common */,
+			);
+			path = GitHubExplorer;
+			sourceTree = "<group>";
+		};
+		CD3BB8671FDFD1A1003CBC75 /* Common */ = {
+			isa = PBXGroup;
+			children = (
 				CD3BB8551FDFD165003CBC75 /* AppDelegate.swift */,
-				CD3BB8571FDFD165003CBC75 /* ViewController.swift */,
-				CD3BB8591FDFD165003CBC75 /* Main.storyboard */,
+				CD3BB8691FDFD1D7003CBC75 /* Helpers */,
+				CD3BB8681FDFD1C5003CBC75 /* Assets */,
+				CD3BB86A1FDFD1E4003CBC75 /* Supporting Files */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CD3BB8681FDFD1C5003CBC75 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				CD3BB85C1FDFD165003CBC75 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CD3BB8691FDFD1D7003CBC75 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CD3BB86A1FDFD1E4003CBC75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				CD3BB85E1FDFD165003CBC75 /* LaunchScreen.storyboard */,
 				CD3BB8611FDFD165003CBC75 /* Info.plist */,
 			);
-			path = GitHubExplorer;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD3BB86B1FDFD240003CBC75 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BB8591FDFD165003CBC75 /* Main.storyboard */,
+				CD3BB86C1FDFD5AB003CBC75 /* Repositories */,
+				CD3BB86E1FDFD6C1003CBC75 /* Commits */,
+				CD3BB86F1FDFE11F003CBC75 /* Releases */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CD3BB86C1FDFD5AB003CBC75 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BB8571FDFD165003CBC75 /* RepositoriesViewController.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD3BB86E1FDFD6C1003CBC75 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BB8701FDFE166003CBC75 /* CommitsViewController.swift */,
+			);
+			path = Commits;
+			sourceTree = "<group>";
+		};
+		CD3BB86F1FDFE11F003CBC75 /* Releases */ = {
+			isa = PBXGroup;
+			children = (
+				CD3BB8721FDFE192003CBC75 /* ReleasesViewController.swift */,
+			);
+			path = Releases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3BB8581FDFD165003CBC75 /* ViewController.swift in Sources */,
+				CD3BB8581FDFD165003CBC75 /* RepositoriesViewController.swift in Sources */,
 				CD3BB8561FDFD165003CBC75 /* AppDelegate.swift in Sources */,
+				CD3BB8731FDFE192003CBC75 /* ReleasesViewController.swift in Sources */,
+				CD3BB8711FDFE166003CBC75 /* CommitsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 363QQW8CCL;
-				INFOPLIST_FILE = GitHubExplorer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHubExplorer/Common/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcpie.GitHubExplorer;
@@ -292,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 363QQW8CCL;
-				INFOPLIST_FILE = GitHubExplorer/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHubExplorer/Common/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcpie.GitHubExplorer;
