@@ -1,0 +1,9 @@
+/* 
+  Localized.strings
+  GitHubExplorer
+
+  Created by Maciej Piechoczek on 16/12/2017.
+  Copyright © 2017 McPie. All rights reserved.
+*/
+
+"general.error.generic" = "Ooops! Something is wrong 😵";
