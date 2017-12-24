@@ -6,4 +6,5 @@
   Copyright © 2017 McPie. All rights reserved.
 */
 
-"general.error.generic" = "Ooops! Something is wrong 😵";
+"general.error.generic" = "Ooops! Something went wrong 😵💩";
+"general.error.noConnection" = "No internet connection 😵💩";
