@@ -15,20 +15,16 @@ class RequestProvider<T: API> {
     func performRequest<U: Decodable>(_ target: T, completionHandler: @escaping (_ decodedData: U?, _ error: APIError?) -> ()) {
         
         provider.request(target) { response in
-            
             switch response {
             case let .success(moyaResponse):
                 
                 do {
-                    
                     let decodedData = try JSONDecoder().decode(U.self, from: moyaResponse.data)
                     completionHandler(decodedData, nil)
                 } catch {
-                    
                     let serializationError = APIError.objectSerialization(reason: error.localizedDescription)
                     completionHandler(nil, serializationError)
                 }
-                
             case let .failure(error):
                 
                 let networkError = APIError.network(reason: error.localizedDescription)
