@@ -11,7 +11,6 @@ import Foundation
 struct Repository: Decodable {
     
     let name: String
-    let fullName: String
     let description: String?
     let language: String?
     let gitHubURL: URL
@@ -19,7 +18,6 @@ struct Repository: Decodable {
     enum CodingKeys: String, CodingKey {
         
         case name
-        case fullName = "full_name"
         case description
         case language
         case gitHubURL = "html_url"

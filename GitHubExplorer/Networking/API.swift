@@ -13,12 +13,10 @@ protocol API: TargetType {}
 extension API {
     
     var sampleData: Data {
-        
         return Data()
     }
     
     var headers: [String: String]? {
-        
         return nil
     }
 }

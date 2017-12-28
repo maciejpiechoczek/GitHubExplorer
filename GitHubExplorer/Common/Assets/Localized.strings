@@ -7,4 +7,7 @@
 */
 
 "general.error.generic" = "Ooops! Something went wrong 😵💩";
-"general.error.noConnection" = "No internet connection 😵💩";
+
+"repositories.noRepositories" = "There are no repos yet.";
+"commits.noCommits" = "There are no commits yet.";
+"releases.noReleases" = "There are no releases yet.";

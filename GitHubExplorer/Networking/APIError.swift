@@ -22,7 +22,6 @@ enum APIError: Error {
 extension APIError: LocalizedError {
     
     public var errorDescription: String? {
-        
         switch self {
         case .network(let reason):
             return reason

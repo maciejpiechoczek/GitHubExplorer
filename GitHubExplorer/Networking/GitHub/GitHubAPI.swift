@@ -10,7 +10,6 @@ import Moya
 
 enum GitHubAPI {
     
-    case organization(orgName: String)
     case repositories(forOrganization: String)
     case commits(forOrganization: String, repositoryName: String)
     case releases(forOrganization: String, repositoryName: String)
@@ -19,7 +18,6 @@ enum GitHubAPI {
 extension GitHubAPI: API {
     
     var baseURL: URL {
-        
         let gitHubAPIBaseURL = "https://api.github.com"
         
         guard let url = URL(string: gitHubAPIBaseURL) else {
@@ -30,11 +28,7 @@ extension GitHubAPI: API {
     }
     
     var path: String {
-        
         switch self {
-        case .organization(let organizationName):
-            return "/orgs/\(organizationName)"
-            
         case .repositories(let organizationName):
             return "/orgs/\(organizationName)/repos"
             
@@ -47,19 +41,11 @@ extension GitHubAPI: API {
     }
     
     var method: Moya.Method {
-        
         return .get
     }
     
     var task: Task {
-        
-        switch self {
-        case .repositories, .commits, .releases:
-            let params: [String: Any] = ["per_page": 100]
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
-            
-        default:
-            return .requestPlain
-        }
+        let params: [String: Any] = ["per_page": 100]
+        return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
 }
