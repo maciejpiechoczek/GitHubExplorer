@@ -1,0 +1,13 @@
+/* 
+  Localized.strings
+  GitHubExplorer
+
+  Created by Maciej Piechoczek on 16/12/2017.
+  Copyright © 2017 McPie. All rights reserved.
+*/
+
+"general.error.generic" = "Ooops! Something went wrong 😵💩";
+
+"repositories.noRepositories" = "There are no repos yet.";
+"commits.noCommits" = "There are no commits yet.";
+"releases.noReleases" = "There are no releases yet.";
